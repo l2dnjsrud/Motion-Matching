@@ -50,7 +50,7 @@ clean:
 	-rm mmatching
 
 mmatching:
-	$(CC) controller.c -o $@ $(BUILD_DEP)
+	$(CC) controller.cpp -o $@ $(BUILD_DEP)
 
 run:
 	./mmatching;
@@ -65,7 +65,7 @@ build_depends:
 	cd depends/raylib && cmake . && make
 
 patch-back:
-	mv controller.old.c controller.c
+	mv controller.old.c controller.cpp
 
 
 .SILENT: clean
